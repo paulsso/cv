@@ -1,0 +1,35 @@
+name: Build CV (SWE)
+
+on:
+  push:
+    paths:
+      - 'CV-2025-SWE/**'
+  pull_request:
+    paths:
+      - 'CV-2025-SWE/**'
+  workflow_dispatch:  # This enables manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeXLive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+      - name: Compile LaTeX document
+        working-directory: CV-2025-SWE
+        run: |
+          pdflatex main.tex
+          pdflatex main.tex  # Run twice to resolve references
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CV
+          path: CV-2025-SWE/main.pdf 
