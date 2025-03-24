@@ -1,0 +1,117 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Oskar}{Paulsson}{Generalist Software Engineer}{materialblue}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{profile-pic - Copy.jpg}
+\end{center}
+
+\bigskip
+
+\flushleft
+\infobubble{\faAt}{cvgreen}{white}{oskar@paulsson.dev}
+\infobubble{\faHome}{cvgreen}{white}{paulsson.dev}
+\infobubble{\faPhone}{cvgreen}{white}{+46793376868} 
+\infobubble{\faMapMarker}{cvgreen}{white}{Gothenburg}
+\infobubble{\faLinkedin}{cvgreen}{white}{Oskar Paulsson}
+\infobubble{\faGithub}{cvgreen}{white}{paulsso}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\begin{minipage}[t]{0.71\textwidth}
+\section*{Personligt Brev - FRA}
+Hej!
+
+Jag söker till Försvarets Radioanstalt eftersom jag länge har varit intresserad av försvsar- och samhällsfrågor. Efter fyra år inom privat sektor tror jag att jag har vad som krävs för att kunna bidra till ett tryggare Sverige.
+
+Jag märker att det finns ett behov av människor med min kompetens och integritet hos myndigheter som delar mina värderingar och söker mig därför till säkerhetsbranschen, så att mina arbetsdagar kan vara till samhällets förtjänst.\\
+
+För närvarande arbetar jag som FoU-utvecklare på RISE i Göteborg, där jag huvudsakligen programmerar i C\#/.NET och Unity, men arbetar även mycket med C++, Python och ReactJS. Jag tycker om att ta initiativ och har utvecklat grafiska applikationer för testövervakning, där jag arbetat nära de huvudsakliga intressenterna genom hela processen.
+
+Tidigare, som DevOps-ingenjör, fick jag möjlighet att optimera CI/CD-pipelines genom att implementera parallelliserade docker-instanser i Azure DevOps. Detta resulterade i både halverad körtid och kostnader, vilket naturligtvis togs emot väl av teamet. Under min tid på SAAB fick jag även möjlighet att arbeta med allt från ESTRIP-applikationen till flygtrafikledningssystem, så jag är bekväm med att hantera både små och stora projekt.\\
+
+Jag trivs verkligen med att arbeta tillsammans med andra och tror på att bygga starka relationer med mina kollegor. Jag lägger stor vikt vid att vara varm och tillgänglig i alla mina professionella interaktioner.
+
+Min akademiska bakgrund med en master i tillämpad matematik och en kandidat i teoretisk fysik har gett mig en solid grund i problemlösning och analytiskt tänkande. Kombinerat med min praktiska erfarenhet av moderna teknologier som Docker, Git och olika programmeringsspråk kan jag angripa utvecklingsutmaningar från både teoretiska och praktiska perspektiv.
+
+På fritiden ägnar jag mig åt att läsa, titta på film, spela spel eller göra musik. Jag ser också till att hitta tid för fysiska aktiviteter som löpning, vandring och styrketräning.
+\\
+Med vänliga hälsningar,\\
+Oskar
+\end{minipage}
+
+\bigskip
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}

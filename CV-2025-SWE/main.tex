@@ -1,0 +1,170 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Oskar}{Paulsson}{Generalist Mjukvaruutvecklare}{materialblue}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{profile-pic - Copy.jpg}
+\end{center}
+
+\bigskip
+
+\bg{cvgreen}{white}{Personligt} \\[0.5em]
+Ålder: 33
+
+Nationalitet: Svensk
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Specialiseringsområden} \\[0.5em]
+
+Applikationsutveckling ~•~ DevOps ~•~ Fordonsindustri
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Intressen}\\[0.5em]
+
+\textbf{Makroekonomi}, \textbf{Företagande} \\ 
+\textbf{Musikproduktion \& DJ'ing},
+\textbf{Styrketräning}, \textbf{Löpning}
+\bigskip
+
+\bg{cvgreen}{white}{Teknikintressen}\\[0.5em]
+
+
+ \texttt{AI} ~/~ \texttt{Krypto} ~/~ \texttt{Webb} ~/~ \texttt{Linux} ~/~ \texttt{Spel}
+
+\vspace{4em}
+\flushleft
+\infobubble{\faAt}{cvgreen}{white}{oskar@paulsson.dev}
+\infobubble{\faHome}{cvgreen}{white}{https://paulsson.dev}
+\infobubble{\faPhone}{cvgreen}{white}{+46793376868} 
+\infobubble{\faMapMarker}{cvgreen}{white}{Gothenburg}
+\infobubble{\faLinkedin}{cvgreen}{white}{Oskar Paulsson}
+\infobubble{\faGithub}{cvgreen}{white}{paulsso}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\begin{minipage}[t]{0.71\textwidth}
+\section*{Om mig}
+Jag är en erfaren mjukvaruutvecklare med bred kompetens inom programmering på både låg och hög nivå. Jag tar gärna initiativ till uppgifter som förbättrar teamets produktivitet och gillar att fördjupa mig i tekniska detaljer. Min föredragna plattform är alltid någon form av Linux-system. För personligt bruk har jag testat många olika distributioner, inklusive ArchLinux, men jag har landat i att Ubuntu-baserade distributioner passar mig bäst för enkelhetens skull.
+\end{minipage}
+
+\small
+\section*{Kort Resumé}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2024--2025}{FoU Mjukvaruutvecklare med ADAS-fokus}{Medarbetare}{Göteborg \color{cvred}}{Huvudsakligen Linux-baserad mjukvaruutveckling i C\#/.NET och Unity men även C++, Python och ReactJS. Ansvarade för större delen av teamets CI-arbete med GitHub Actions och ledde utvecklingen av en grafisk applikation som användes för att övervaka testprocedurer med återkoppling från intressenter. Vårt team var starkt fokuserat på ADAS och specifikt testning av ADAS-redo basfordon.}{rise-logo-black.jpg} \\
+    \cvevent{2023--2024}{DevOps-ingenjör}{Medarbetare}{Göteborg \color{cvred}}{Ledde implementeringen av parallelliserade docker-instanser i Azure DevOps för att effektivisera pipelines. Med min lösning kunde vi reducera kostnaderna med 50\% och körtiden med cirka 75\%, vilket var mycket uppskattat.}{polestar-logo.jpg} \\
+    \cvevent{2021--2023}{Mjukvaruutvecklare}{Medarbetare}{Göteborg \color{cvred}}{Under min tid på SAAB prövade jag tre olika roller; först som mjukvaruutvecklare i ett team som utvecklade ESTRIP-applikationen med C++/QML, därefter flyttade jag till ett projekt där jag arbetade med en kund för att slutföra leverans och driftsättning av deras nya flygtrafikledningssystem på plats, och slutligen arbetade jag med den interna mjukvarufabriken, dvs DevOps-teamet. Jag tog initativ till ett projekt där jag satte upp en Grafana-dashboard för att övervaka körningen av våra automatiserade byggen och tester.}{Saab-logo.png}
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.8\textwidth}
+\section*{Tekniska Preferenser}
+\begin{tabular}{r @{\hspace{0.5em}}c @{\hspace{0.5em}} c c l}
+     \vspace{0.3em}
+     \bg{skilllabelcolour}{iconcolour}{C++} & \bg{skilllabelcolour}{iconcolour}{C\#} & \bg{skilllabelcolour}{iconcolour}{python} &
+     \bg{skilllabelcolour}{iconcolour}{linux} & \bg{skilllabelcolour}{iconcolour}{docker} \\ 
+     \vspace{0.3em}
+     \bg{skilllabelcolour}{iconcolour}{git} &
+     \bg{skilllabelcolour}{iconcolour}{Blender} & \bg{skilllabelcolour}{iconcolour}{Unity/Unreal} & \bg{skilllabelcolour}{iconcolour}{DevOps} &
+     \bg{skilllabelcolour}{iconcolour}{REST} \\
+     \vspace{0.3em}
+    \bg{skilllabelcolour}{iconcolour}{Wireshark} & \bg{skilllabelcolour}{iconcolour}{TCP/UDP} &
+     \bg{skilllabelcolour}{iconcolour}{MATLAB} & \bg{skilllabelcolour}{iconcolour}{Simulink} & \bg{skilllabelcolour}{iconcolour}{Deep Learning} \\
+      \end{tabular}
+\end{minipage}
+
+\begin{minipage}[t]{0.8\textwidth}
+\section*{Utbildning}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2013--2017}{Teoretisk Fysik}{Kandidatexamen}{Karlstads Universitet}{Utöver fysikkurserna läste jag engelska för industrin, JAVA, praktisk djupinlärning och globalt klimat. Min kandidatuppsats handlade om FEM-analys av radaråterspridning från havet.}{kau.png} \\
+    \cvdegree{2017--2020}{Tillämpad Matematik}{Masterexamen}{Göteborgs Universitet}{Tog examen med utmärkelse för min masteruppsats inom beräkningsfysik. De mest givande delarna av programmet var kurserna i stokastisk optimering och artificiella neuronnät, där vi fördjupade oss i den matematiska grunderna till AI.}{gu.png}
+\end{tabular}
+\end{minipage}\hfill
+
+\section*{Språk}
+\begin{tabular}{l | ll}
+\textbf{Svenska} &  & {\phantom{x}\footnotesize Modersmål} \\
+\textbf{Engelska} &  & {\phantom{x}\footnotesize Avancerat}
+\end{tabular}
+\bigskip
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
